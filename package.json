@@ -7,13 +7,15 @@
     "serve": "eleventy --serve",
     "watch": "eleventy --watch",
     "clean": "rm -rf _site",
-    "start": "npm run serve"
+    "start": "npm run serve",
+    "pdf": "node scripts/print-to-pdf.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
+    "@11ty/eleventy": "^3.1.2",
+    "puppeteer": "^24.19.0"
   }
 }

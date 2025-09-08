@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /calendar/index.html
+---
+{% set weekly = plan.weekly %}
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Weekly Execution — {{ plan.meta.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;background:#0b0d12;color:#e6edf3;font-family:Inter,system-ui,sans-serif}
+    .wrap{max-width:1100px;margin:0 auto;padding:2rem 1.25rem 4rem}
+    .panel{background:#11151c;border:1px solid #1b2330;border-radius:14px;padding:1rem}
+    .grid{display:grid;gap:1rem}
+    .weekly{grid-template-columns:repeat(7,1fr)}
+    h1{font-size:2rem;margin:0 0 1rem}
+    h4{margin:.25rem 0;color:#4cc9f0}
+    .chip{font-size:.85rem;padding:.35rem .5rem;border:1px solid #1b2330;border-radius:8px;background:#0e131c}
+    @media(max-width:900px){.weekly{grid-template-columns:1fr 1fr}}
+  </style>
+</head><body>
+  <main class="wrap">
+    <h1>Weekly Execution</h1>
+    <section class="panel">
+      <div class="grid weekly">
+        {% for day, items in weekly %}
+          <div class="panel">
+            <h4>{{ day }}</h4>
+            {% for it in items %}<div class="chip">{{ it }}</div>{% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+</body></html>

@@ -1,68 +1,7 @@
-@page { 
-    size: 24in 36in; 
-    margin: 0.25in; 
-}
-
-* { 
-    -webkit-print-color-adjust: exact; 
-    print-color-adjust: exact; 
-}
-
-body {
-    background: white !important;
-    color: black !important;
-    font-size: 12pt;
-    line-height: 1.2;
-}
-
-.section {
-    background: white !important;
-    border: 2px solid #000 !important;
-    page-break-inside: avoid;
-    margin-bottom: 0.5in;
-    padding: 0.25in;
-}
-
-.card {
-    background: #f8f9fa !important;
-    border: 1px solid #000 !important;
-    page-break-inside: avoid;
-}
-
-h1 { font-size: 24pt; }
-h2 { font-size: 20pt; }
-h3 { font-size: 18pt; }
-h4 { font-size: 16pt; }
-
-.grid {
-    gap: 0.125in;
-}
-
-.tier-list li {
-    font-size: 10pt;
-    padding: 0.125in 0;
-}
-
-.milestone {
-    background: #f0f0f0 !important;
-    border: 1px solid #000 !important;
-    margin-bottom: 0.125in;
-    padding: 0.125in;
-}
-
-.budget-item {
-    font-size: 10pt;
-    padding: 0.0625in 0;
-}
-
-.highlight {
-    color: #0066cc !important;
-}
-
-.success {
-    color: #006600 !important;
-}
-
-.warning {
-    color: #cc6600 !important;
-}
+@page { size: 24in 36in; margin: 0.25in; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html,body { font-size: 14pt; }           /* larger base for distance viewing */
+h1 { font-size: 36pt; }
+h2 { font-size: 24pt; }
+h3 { font-size: 16pt; }
+.panel, .tier, .day, ul, li { break-inside: avoid; } /* prevent orphaning */

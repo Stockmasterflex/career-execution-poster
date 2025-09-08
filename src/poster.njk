@@ -14,6 +14,7 @@ permalink: "/poster/"
 <!-- Hero Section -->
 <div class="section">
     <h1>{{ meta.title }}</h1>
+    <a class="pill" href="/calendar/">Open full Weekly Calendar →</a>
     <div class="grid grid-4">
         <div class="card">
             <h3>Location</h3>
@@ -63,45 +64,11 @@ permalink: "/poster/"
     </div>
 </div>
 
-<!-- Tiers Section -->
-<div class="section">
-    <h2>Target Companies</h2>
-    {% set p1 = phases[0] %}
-    <div class="grid grid-4">
-        <div class="card">
-            <h3>Tier 1A</h3>
-            <ul class="tier-list">
-                {% for company in p1.tiers.tier1a %}
-                <li>{{ company }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Tier 1B</h3>
-            <ul class="tier-list">
-                {% for company in p1.tiers.tier1b %}
-                <li>{{ company }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Tier 2</h3>
-            <ul class="tier-list">
-                {% for company in p1.tiers.tier2 %}
-                <li>{{ company }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Tier 3</h3>
-            <ul class="tier-list">
-                {% for company in p1.tiers.tier3 %}
-                <li>{{ company }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
+{% for ph in phases %}
+  {% if ph.tiers %}
+    {% include "sections/tier-grid.njk" %}
+  {% endif %}
+{% endfor %}
 
 <!-- Daily Section -->
 <div class="section">
@@ -135,19 +102,20 @@ permalink: "/poster/"
     <div class="grid grid-2">
         <div class="card">
             <h3>Living Expenses</h3>
-            <p class="highlight">${{ budget.living }}</p>
+            <p class="highlight">{{ budget.living | currency }}</p>
         </div>
         <div class="card">
             <h3>Professional Development</h3>
             {% for category, amount in budget.professional %}
             <div class="budget-item">
                 <span>{{ category | replace("_", " ") | title }}</span>
-                <span>${{ amount }}</span>
+                <span>{{ amount | currency }}</span>
             </div>
             {% endfor %}
+            {% set p = budget.professional %}
             <div class="budget-item" style="border-top: 2px solid #444; font-weight: 600;">
-                <span>Total Professional</span>
-                <span>$3000</span>
+                <span><strong>Total Professional</strong></span>
+                <strong>{{ (p.cfa_cmt + p.events + p.branding + p.coaching + p.wardrobe) | currency }}</strong>
             </div>
         </div>
     </div>
