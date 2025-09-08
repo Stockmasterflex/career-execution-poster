@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Kyle's Ultimate Career Execution Plan",
+    "location": "Bay Area",
+    "timeline": "Sept 2025–2028",
+    "northStar": "$120K–200K+ by 2028",
+    "runway": "6–8 months",
+    "targetStart": "Feb 2026",
+    "sleep": "10PM–6AM",
+    "marketHours": "6:30AM–1PM PT"
+  },
+  "phases": [
+    {
+      "id": "phase1",
+      "title": "Phase 1: Foundation & Market Entry",
+      "dates": "Sep–Dec 2025",
+      "goals": [
+        "SIE passed",
+        "CMT Level I (Dec exam)",
+        "50+ applications",
+        "15+ interviews",
+        "60+ posts, 4+ articles",
+        "75+ connections, 15+ coffee chats",
+        "Legend Room portfolio ready"
+      ],
+      "tiers": {
+        "tier1a": ["Charles Schwab (SF HQ)", "Interactive Brokers", "Robinhood (Menlo Park)", "Franklin Templeton (SF)", "TradeStation"],
+        "tier1b": ["Coinbase (SF)", "Plaid (SF)", "Tastytrade", "Kraken (SF)", "eToro"],
+        "tier2": ["Wells Fargo (SF)", "Stripe (SF)", "Square/Block (SF)", "Dodge & Cox (SF)", "Advent/SS&C"],
+        "tier3": []
+      }
+    },
+    {
+      "id": "phase2",
+      "title": "Phase 2: Interview Intensification & Job Closing",
+      "dates": "Jan–Mar 2026",
+      "goals": [
+        "3–4 offers by mid-Feb",
+        "$80K+ starting position",
+        "CMT Level II registered",
+        "70%+ pipeline conversion"
+      ],
+      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
+    },
+    {
+      "id": "phase3",
+      "title": "Phase 3: Performance & Rapid Advancement",
+      "dates": "Mar 2026–Dec 2027",
+      "goals": [
+        "Top 20% performer",
+        "CMT II complete",
+        "$95K+ by Mar 2027, $120K+ by Dec 2027",
+        "Speaking + published research"
+      ],
+      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
+    },
+    {
+      "id": "phase4",
+      "title": "Phase 4: Mastery & Wealth Building",
+      "dates": "2028+",
+      "goals": [
+        "CMT Charter complete",
+        "$150K–300K+ total comp",
+        "Industry authority",
+        "Wealth building on track"
+      ],
+      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
+    }
+  ],
+  "daily": {
+    "morning": [
+      {"activity": "Market analysis + trade journal", "minutes": 25},
+      {"activity": "CMT study or skill dev", "minutes": 25},
+      {"activity": "LinkedIn engage + plan", "minutes": 10}
+    ],
+    "evening": [
+      {"activity": "Market close review + setups", "minutes": 20},
+      {"activity": "Networking or content", "minutes": 25},
+      {"activity": "Goals review + plan", "minutes": 15}
+    ]
+  },
+  "weekly": {
+    "Mon": ["Week planning", "Target company research", "Content calendar", "Chest + Triceps (6AM)", "Market 6:30–1PM", "CMT 2PM"],
+    "Tue": ["Deep CMT (3h+)", "Applications", "Back + Biceps (6AM)", "Market 6:30–1PM", "Content creation"],
+    "Wed": ["Networking focus", "Coffee chats", "LinkedIn outreach", "Core + Cardio (6AM)", "Market 6:30–1PM", "CMT 2PM"],
+    "Thu": ["Content creation", "Skill development", "Interview prep", "Shoulders + Arms (6AM)", "Market 6:30–1PM", "CMT 2PM"],
+    "Fri": ["Week review", "Metrics tracking", "Follow-ups", "Legs + Glutes (6AM)", "Market 6:30–1PM", "CMT 2PM"],
+    "Sat": ["Major study", "Legend Room dev", "Long-form content", "Date night", "Recharge"],
+    "Sun": ["Strategic planning", "Market analysis", "CMT review", "Family time", "Rest & reset"]
+  },
+  "budget": {
+    "living": 20000,
+    "professional": {
+      "cfa_cmt": 550,
+      "events": 1000,
+      "branding": 400,
+      "coaching": 600,
+      "wardrobe": 450
+    }
+  },
+  "milestones": {
+    "level1": {"date": "Jan 2026", "items": ["SIE + CMT I passed", "Brand established", "Network activated", "Job search launched"]},
+    "level2": {"date": "Mar 2026", "items": ["Finance role secured", "$80K+ salary", "CMT II registered", "Credibility built"]},
+    "level3": {"date": "Dec 2027", "items": ["$120K+ comp", "CMT II complete", "Recognition", "Senior role"]},
+    "level4": {"date": "2028+", "items": ["CMT Charter", "$150K+ comp", "Authority", "Wealth on track"]}
+  }
+}

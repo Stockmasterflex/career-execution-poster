@@ -1,0 +1,172 @@
+---
+layout: base.njk
+title: "Career Execution Poster"
+permalink: "/poster/"
+---
+
+{% set meta = plan.meta %}
+{% set phases = plan.phases %}
+{% set daily = plan.daily %}
+{% set weekly = plan.weekly %}
+{% set budget = plan.budget %}
+{% set milestones = plan.milestones %}
+
+<!-- Hero Section -->
+<div class="section">
+    <h1>{{ meta.title }}</h1>
+    <div class="grid grid-4">
+        <div class="card">
+            <h3>Location</h3>
+            <p class="highlight">{{ meta.location }}</p>
+        </div>
+        <div class="card">
+            <h3>Timeline</h3>
+            <p class="highlight">{{ meta.timeline }}</p>
+        </div>
+        <div class="card">
+            <h3>North Star</h3>
+            <p class="success">{{ meta.northStar }}</p>
+        </div>
+        <div class="card">
+            <h3>Runway</h3>
+            <p class="warning">{{ meta.runway }}</p>
+        </div>
+    </div>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3>Target Start</h3>
+            <p>{{ meta.targetStart }}</p>
+        </div>
+        <div class="card">
+            <h3>Schedule</h3>
+            <p>Sleep: {{ meta.sleep }}<br>Market: {{ meta.marketHours }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Phases Section -->
+<div class="section">
+    <h2>Execution Phases</h2>
+    <div class="grid grid-2">
+        {% for phase in phases %}
+        <div class="card">
+            <h3>{{ phase.title }}</h3>
+            <p class="highlight">{{ phase.dates }}</p>
+            <h4>Goals:</h4>
+            <ul class="tier-list">
+                {% for goal in phase.goals %}
+                <li>{{ goal }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Tiers Section -->
+<div class="section">
+    <h2>Target Companies</h2>
+    {% set p1 = phases[0] %}
+    <div class="grid grid-4">
+        <div class="card">
+            <h3>Tier 1A</h3>
+            <ul class="tier-list">
+                {% for company in p1.tiers.tier1a %}
+                <li>{{ company }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Tier 1B</h3>
+            <ul class="tier-list">
+                {% for company in p1.tiers.tier1b %}
+                <li>{{ company }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Tier 2</h3>
+            <ul class="tier-list">
+                {% for company in p1.tiers.tier2 %}
+                <li>{{ company }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Tier 3</h3>
+            <ul class="tier-list">
+                {% for company in p1.tiers.tier3 %}
+                <li>{{ company }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Daily Section -->
+<div class="section">
+    <h2>Daily Routine</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3>Morning ({{ daily.morning | length * 10 }} min)</h3>
+            <ul class="tier-list">
+                {% for activity in daily.morning %}
+                <li>{{ activity.activity }} ({{ activity.minutes }}min)</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Evening ({{ daily.evening | length * 20 }} min)</h3>
+            <ul class="tier-list">
+                {% for activity in daily.evening %}
+                <li>{{ activity.activity }} ({{ activity.minutes }}min)</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Weekly Section -->
+{% include "sections/weekly.njk" %}
+
+<!-- Budget Section -->
+<div class="section">
+    <h2>Budget Allocation</h2>
+    <div class="grid grid-2">
+        <div class="card">
+            <h3>Living Expenses</h3>
+            <p class="highlight">${{ budget.living }}</p>
+        </div>
+        <div class="card">
+            <h3>Professional Development</h3>
+            {% for category, amount in budget.professional %}
+            <div class="budget-item">
+                <span>{{ category | replace("_", " ") | title }}</span>
+                <span>${{ amount }}</span>
+            </div>
+            {% endfor %}
+            <div class="budget-item" style="border-top: 2px solid #444; font-weight: 600;">
+                <span>Total Professional</span>
+                <span>$3000</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Milestones Section -->
+<div class="section">
+    <h2>Key Milestones</h2>
+    {% for level, data in milestones %}
+    <div class="milestone">
+        <div>
+            <h3>{{ level | replace("level", "Level ") | title }}</h3>
+            <ul style="margin: 0.5rem 0; padding-left: 1rem;">
+                {% for item in data.items %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="highlight">{{ data.date }}</div>
+    </div>
+    {% endfor %}
+</div>
