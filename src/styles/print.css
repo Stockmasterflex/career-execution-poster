@@ -1,7 +1,0 @@
-@page { size: 24in 36in; margin: 0.25in; }
-* { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-html,body { font-size: 14pt; }           /* larger base for distance viewing */
-h1 { font-size: 36pt; }
-h2 { font-size: 24pt; }
-h3 { font-size: 16pt; }
-.panel, .tier, .day, ul, li { break-inside: avoid; } /* prevent orphaning */

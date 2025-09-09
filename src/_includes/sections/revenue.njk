@@ -1,0 +1,9 @@
+{# sections/revenue.njk #}
+<section class="panel">
+  <h2>Immediate Revenue Bridges</h2>
+  <ul class="goals">
+    {% for r in revenue %}
+      <li><strong>{{ r.label }}</strong> — {{ r.range }}</li>
+    {% endfor %}
+  </ul>
+</section>

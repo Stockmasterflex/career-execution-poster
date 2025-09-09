@@ -1,107 +1,283 @@
 {
+  "print": {
+    "size": "24x36"
+  },
   "meta": {
     "title": "Kyle's Ultimate Career Execution Plan",
-    "location": "Bay Area",
-    "timeline": "Sept 2025–2028",
-    "northStar": "$120K–200K+ by 2028",
-    "runway": "6–8 months",
-    "targetStart": "Feb 2026",
-    "sleep": "10PM–6AM",
-    "marketHours": "6:30AM–1PM PT"
+    "subtitle": "From Unemployed → SIE → CMT → Six-Figure Technical Analyst | Bay Area | Sept 2025–2028",
+    "siteUrl": "https://kyleholthaus.com",
+    "badges": [
+      "💰 Target: $120K–200K+ by 2028",
+      "📍 Bay Area Advantage",
+      "⏰ Job by Feb 2026",
+      "🎯 6–8 Month Runway",
+      "📚 CMT Charter Path",
+      "🤖 AI + Technical Edge"
+    ],
+    "debug": false,
+    "todayFocus": {
+      "Mon": "Plan week • Target research • Market prep • Networking outreach",
+      "Tue": "Deep CMT • Market analysis • Applications",
+      "Wed": "Networking (coffee chats, DMs) • LinkedIn engagement",
+      "Thu": "Content creation • Skill development • Interview prep",
+      "Fri": "Week review • Metrics • Follow-ups",
+      "Sat": "Major CMT study • Legend Room dev / long-form",
+      "Sun": "Strategic planning • Market outlook • Family + reset"
+    }
   },
+  "current": [
+    "Starting Point: Unemployed, 6–8 month runway, SIE exam Sept 6, 2025",
+    "Location Advantage: Alameda / SF Bay Area (FinTech + Traditional Finance hub)",
+    "Unique Edge: Technical analysis experience + AI trading projects + Minervini training",
+    "Target Outcome: $120K–200K+ Technical Analyst by 2028"
+  ],
   "phases": [
     {
-      "id": "phase1",
-      "title": "Phase 1: Foundation & Market Entry",
-      "dates": "Sep–Dec 2025",
-      "goals": [
-        "SIE passed",
-        "CMT Level I (Dec exam)",
-        "50+ applications",
-        "15+ interviews",
-        "60+ posts, 4+ articles",
-        "75+ connections, 15+ coffee chats",
-        "Legend Room portfolio ready"
-      ],
-      "tiers": {
-        "tier1a": ["Charles Schwab (SF HQ)", "Interactive Brokers", "Robinhood (Menlo Park)", "Franklin Templeton (SF)", "TradeStation"],
-        "tier1b": ["Coinbase (SF)", "Plaid (SF)", "Tastytrade", "Kraken (SF)", "eToro"],
-        "tier2": ["Wells Fargo (SF)", "Stripe (SF)", "Square/Block (SF)", "Dodge & Cox (SF)", "Advent/SS&C"],
-        "tier3": []
-      }
+      "name": "Phase 1: Foundation & Immediate Market Entry",
+      "dates": "Sept – Dec 2025",
+      "pillars": [
+        {
+          "title": "🎓 Certifications & Skills",
+          "items": [
+            "✅ Passed SIE (Sept 6)",
+            "✅ Registered CMT Level I → Dec exam",
+            "Study: 15–20 hrs/week",
+            "Daily trade journal with R:R",
+            "Legend Room AI documentation",
+            "GitHub portfolio ready"
+          ]
+        },
+        {
+          "title": "🌐 Brand & Digital Presence",
+          "items": [
+            "Week 1: LinkedIn overhaul (headline + about + experience)",
+            "Week 2: Portfolio website launch",
+            "Content: Mon outlook, Wed education, Fri prep, Monthly deep-dive"
+          ]
+        },
+        {
+          "title": "🤝 Networking + Applications",
+          "items": [
+            "Week 1: Join CFA SF + CMT Bay Area",
+            "Week 2: 2 info interviews/week",
+            "Week 3: Applications 15–20/week",
+            "Monthly: 2 CFA + 2 FinTech + 1 trading event",
+            "Daily LinkedIn 15m",
+            "Targets: 50+ apps by Dec, 10+ interviews by Nov"
+          ]
+        }
+      ]
     },
     {
-      "id": "phase2",
-      "title": "Phase 2: Interview Intensification & Job Closing",
-      "dates": "Jan–Mar 2026",
-      "goals": [
-        "3–4 offers by mid-Feb",
-        "$80K+ starting position",
-        "CMT Level II registered",
-        "70%+ pipeline conversion"
-      ],
-      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
+      "name": "Phase 2: Interview Intensification & Job Closing",
+      "dates": "Jan – Mar 2026",
+      "pillars": [
+        { "title": "🎯 Pipeline Mgmt", "items": ["Convert P1 interviews to offers","70%+ conversion","+10–15 apps if needed","Leverage CMT I results"] },
+        { "title": "💰 Salary Negotiation", "items": ["Baseline $75–85K","Target $85–95K","Use multiple offers","Bay Area premium"] },
+        { "title": "✅ Success Metrics", "items": ["3–4 offers by mid-Feb","$80K+ starting","Start by Mar 1, 2026","CMT II registered"] }
+      ]
     },
     {
-      "id": "phase3",
-      "title": "Phase 3: Performance & Rapid Advancement",
-      "dates": "Mar 2026–Dec 2027",
-      "goals": [
-        "Top 20% performer",
-        "CMT II complete",
-        "$95K+ by Mar 2027, $120K+ by Dec 2027",
-        "Speaking + published research"
-      ],
-      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
-    },
-    {
-      "id": "phase4",
-      "title": "Phase 4: Mastery & Wealth Building",
-      "dates": "2028+",
-      "goals": [
-        "CMT Charter complete",
-        "$150K–300K+ total comp",
-        "Industry authority",
-        "Wealth building on track"
-      ],
-      "tiers": { "tier1a": [], "tier1b": [], "tier2": [], "tier3": [] }
+      "name": "Phase 3: Performance & Rapid Advancement",
+      "dates": "Mar 2026 – Dec 2027",
+      "pillars": [
+        { "title": "📈 Career Performance", "items": ["Exceed expectations (first 90 days)","Top-20% performer","Lead visible projects","Build advocates"] },
+        { "title": "💵 Compensation Growth", "items": ["+8–15% at 6 months","$95–115K at 12 months","$120K+ total comp at 18 months","Senior role or external move"] },
+        { "title": "🎓 Professional Development", "items": ["CMT II complete (June 2026)","CMT III registered (Dec 2027)","Talks + publications"] }
+      ]
     }
   ],
+  "targets": {
+    "tier1A": [
+      ["Charles Schwab (SF HQ)","Trading ops, research, tech"],
+      ["Interactive Brokers","TA, platform ops, client svcs"],
+      ["Robinhood (Menlo Park)","Product analysis, trading ops"],
+      ["Franklin Templeton (SF)","Investment research, PM"],
+      ["TradeStation","Platform support, market analysis"]
+    ],
+    "tier1B": [
+      ["Coinbase (SF)","Institutions, trading ops"],
+      ["Plaid (SF)","Data analysis, partnerships"],
+      ["Tastytrade","Research, content, analytics"],
+      ["Kraken (SF)","Market analysis, research"],
+      ["eToro","Platform research, education"]
+    ],
+    "tier2": [
+      ["Wells Fargo (SF)","IB tech, AM"],["Stripe (SF)","FinOps, risk, data"],
+      ["Square/Block (SF)","Analytics, trading tech"],
+      ["Dodge & Cox (SF)","Equity research, quant"],
+      ["Advent/SS&C","Client solutions, implementation"]
+    ]
+  },
   "daily": {
     "morning": [
-      {"activity": "Market analysis + trade journal", "minutes": 25},
-      {"activity": "CMT study or skill dev", "minutes": 25},
-      {"activity": "LinkedIn engage + plan", "minutes": 10}
+      ["📈 Market analysis + trade journal","25 min"],
+      ["📚 CMT study or skill dev","25 min"],
+      ["💬 LinkedIn engagement + content planning","10 min"]
     ],
     "evening": [
-      {"activity": "Market close review + setups", "minutes": 20},
-      {"activity": "Networking or content", "minutes": 25},
-      {"activity": "Goals review + plan", "minutes": 15}
+      ["📊 Close review + tomorrow's setup","20 min"],
+      ["🤝 Outreach or content creation","25 min"],
+      ["🎯 Goals review + next-day plan","15 min"]
     ]
   },
   "weekly": {
-    "Mon": ["Week planning", "Target company research", "Content calendar", "Chest + Triceps (6AM)", "Market 6:30–1PM", "CMT 2PM"],
-    "Tue": ["Deep CMT (3h+)", "Applications", "Back + Biceps (6AM)", "Market 6:30–1PM", "Content creation"],
-    "Wed": ["Networking focus", "Coffee chats", "LinkedIn outreach", "Core + Cardio (6AM)", "Market 6:30–1PM", "CMT 2PM"],
-    "Thu": ["Content creation", "Skill development", "Interview prep", "Shoulders + Arms (6AM)", "Market 6:30–1PM", "CMT 2PM"],
-    "Fri": ["Week review", "Metrics tracking", "Follow-ups", "Legs + Glutes (6AM)", "Market 6:30–1PM", "CMT 2PM"],
-    "Sat": ["Major study", "Legend Room dev", "Long-form content", "Date night", "Recharge"],
-    "Sun": ["Strategic planning", "Market analysis", "CMT review", "Family time", "Rest & reset"]
+    "Mon": ["Week planning","Target company research","Content calendar","Chest + Triceps (6AM)","Market 6:30–1PM","CMT 2PM"],
+    "Tue": ["Deep CMT (3h+)","Applications","Back + Biceps (6AM)","Market 6:30–1PM","Content creation"],
+    "Wed": ["Networking focus","Coffee chats","LinkedIn outreach","Core + Cardio (6AM)","Market 6:30–1PM","CMT 2PM"],
+    "Thu": ["Content creation","Skill development","Interview prep","Shoulders + Arms (6AM)","Market 6:30–1PM","CMT 2PM"],
+    "Fri": ["Week review","Metrics tracking","Follow-ups","Legs + Glutes (6AM)","Market 6:30–1PM","CMT 2PM"],
+    "Sat": ["Major study","Legend Room dev","Long-form content","Date night","Recharge"],
+    "Sun": ["Strategic planning","Market analysis","CMT review","Family time","Rest & reset"]
   },
   "budget": {
     "living": 20000,
-    "professional": {
-      "cfa_cmt": 550,
-      "events": 1000,
-      "branding": 400,
-      "coaching": 600,
-      "wardrobe": 450
-    }
+    "pro": [
+      ["CFA SF + CMT", 550],
+      ["Networking / Events", 1000],
+      ["Website / Branding", 400],
+      ["Interview Coaching", 600],
+      ["Wardrobe / Professional", 450]
+    ]
   },
-  "milestones": {
-    "level1": {"date": "Jan 2026", "items": ["SIE + CMT I passed", "Brand established", "Network activated", "Job search launched"]},
-    "level2": {"date": "Mar 2026", "items": ["Finance role secured", "$80K+ salary", "CMT II registered", "Credibility built"]},
-    "level3": {"date": "Dec 2027", "items": ["$120K+ comp", "CMT II complete", "Recognition", "Senior role"]},
-    "level4": {"date": "2028+", "items": ["CMT Charter", "$150K+ comp", "Authority", "Wealth on track"]}
+  "bridges": [
+    ["Technical Analysis Consulting", "$100–200/hr"],
+    ["Legend Room Beta Testing", "$200–500/mo"],
+    ["Freelance Market Research", "$75–150/hr"],
+    ["Trading Education", "$50–100/hr"]
+  ],
+  "emergency": [
+    ["Green Zone", "> $15K remaining — Full execution mode", "green"],
+    ["Yellow Zone", "$10–15K — Activate bridges", "yellow"],
+    ["Red Zone", "< $10K — Accept finance-adjacent role", "red"]
+  ],
+  "kpisPhase1": {
+    "Certifications": ["SIE 80%+","CMT I pass in Dec"],
+    "Job Pipeline": ["50+ apps","30%+ response rate","10+ by Nov, 15+ by Dec interviews","2–3 offers by year-end"],
+    "Content & Brand": ["40+ posts","3+ articles","1000+ LinkedIn","Portfolio site live"],
+    "Network": ["75+ meaningful connections","8+ coffee chats","5+ events monthly"],
+    "Company Research": ["Intel on all 15 targets","Employee contacts","Tailored strategies"],
+    "Technical Skills": ["Legend Room demo-ready","GitHub portfolio active","Trading journal documented"]
+  },
+  "kpiTracker": [
+    {
+      "title": "CMT Study Progress",
+      "goal": 35,
+      "current": 12,
+      "unit": "%",
+      "weeklyTarget": "8–10% / week",
+      "thisWeek": 3
+    },
+    {
+      "title": "Networking DMs",
+      "goal": 40,
+      "current": 3,
+      "unit": "",
+      "weeklyTarget": "8–10 / week",
+      "thisWeek": 2
+    },
+    {
+      "title": "Coffee Chats",
+      "goal": 8,
+      "current": 1,
+      "unit": "",
+      "weeklyTarget": "2–3 / week",
+      "thisWeek": 0
+    },
+    {
+      "title": "Applications Sent",
+      "goal": 50,
+      "current": 3,
+      "unit": "",
+      "weeklyTarget": "10–15 / week",
+      "thisWeek": 2
+    },
+    {
+      "title": "LinkedIn/Twitter Posts",
+      "goal": 40,
+      "current": 3,
+      "unit": "",
+      "weeklyTarget": "4–5 / week",
+      "thisWeek": 1
+    },
+    {
+      "title": "Website Build",
+      "goal": 100,
+      "current": 25,
+      "unit": "%",
+      "weeklyTarget": "15–20% / week",
+      "thisWeek": 5
+    }
+  ],
+  "victories": [
+    ["Level 1 Victory","January 2026",["SIE + CMT I passed","Brand established","Network activated","Job search launched"],"Celebration dinner + wardrobe upgrade"],
+    ["Level 2 Victory","March 2026",["Finance role secured","$80K+ salary","CMT II registered","Credibility built"],"Weekend getaway + tech upgrade"],
+    ["Level 3 Victory","December 2027",["$120K+ comp","CMT II complete","Industry recognition","Senior role"],"European vacation + invest start"],
+    ["Level 4 Victory","2028+",["CMT Charter complete","$150K+ comp","Authority established","Wealth on track"],"Ultimate celebration"]
+  ],
+  "northStar": {
+    "transformation": "From unemployed to elite technical analyst in 30 months",
+    "mantra": "I execute my plan with precision. Every day I follow this system brings me closer to financial freedom.",
+    "weeklyFocus": "Network + Study + Create + Apply = Inevitable Success",
+    "monthlyReminder": "I am building the career and life I want through consistent, strategic action."
+  },
+  "weeklyTimed": {
+    "meta": {
+      "startHour": 5,
+      "endHour": 23,
+      "tz": "America/Los_Angeles",
+      "legend": [
+        {"label": "Market", "color": "#8bdfc8"},
+        {"label": "Study (CMT)", "color": "#cfc5ff"},
+        {"label": "Gym", "color": "#bfe3ff"},
+        {"label": "Content", "color": "#ffe6b3"},
+        {"label": "Networking", "color": "#ffd1dc"}
+      ]
+    },
+    "mon": [
+      {"title":"Gym","emoji":"💪","start":"06:00","end":"07:00","color":"#bfe3ff","tag":"Strength","note":"Chest + Triceps"},
+      {"title":"Market","emoji":"📈","start":"06:30","end":"13:00","color":"#8bdfc8","tag":"Trade/Analyze"},
+      {"title":"CMT Study","emoji":"📚","start":"14:00","end":"15:00","color":"#cfc5ff","tag":"Level I"},
+      {"title":"Post: Chart + Outlook","emoji":"📝","start":"07:30","end":"07:45","color":"#ffe6b3","importance":"high","overlapLane":2}
+    ],
+    "tue": [
+      {"title":"Gym","emoji":"💪","start":"06:00","end":"07:00","color":"#bfe3ff","tag":"Back + Biceps"},
+      {"title":"Market","emoji":"📈","start":"06:30","end":"13:00","color":"#8bdfc8"},
+      {"title":"Deep CMT Block","emoji":"📚","start":"13:30","end":"16:30","color":"#cfc5ff","tag":"3+ hrs"},
+      {"title":"Content Creation","emoji":"✍️","start":"17:00","end":"18:00","color":"#ffe6b3","tag":"Article"}
+    ],
+    "wed": [
+      {"title":"Networking","emoji":"🤝","start":"09:00","end":"11:00","color":"#ffd1dc","tag":"Coffee chats"},
+      {"title":"LinkedIn Outreach","emoji":"💬","start":"11:00","end":"11:30","color":"#ffd1dc","dashed":true},
+      {"title":"Core + Cardio","emoji":"🏃","start":"06:00","end":"07:00","color":"#bfe3ff"},
+      {"title":"Market","emoji":"📈","start":"06:30","end":"13:00","color":"#8bdfc8"},
+      {"title":"CMT Study","emoji":"📚","start":"14:00","end":"15:00","color":"#cfc5ff"}
+    ],
+    "thu": [
+      {"title":"Shoulders + Arms","emoji":"💪","start":"06:00","end":"07:00","color":"#bfe3ff"},
+      {"title":"Market","emoji":"📈","start":"06:30","end":"13:00","color":"#8bdfc8"},
+      {"title":"Content Creation","emoji":"✍️","start":"10:00","end":"12:00","color":"#ffe6b3"},
+      {"title":"Skill Dev","emoji":"🛠️","start":"13:00","end":"14:00","color":"#cfc5ff","tag":"Python/Bloomberg"},
+      {"title":"Interview Prep","emoji":"🎤","start":"15:00","end":"16:00","color":"#cfc5ff","dashed":true}
+    ],
+    "fri": [
+      {"title":"Legs + Glutes","emoji":"🏋️","start":"06:00","end":"07:00","color":"#bfe3ff"},
+      {"title":"Market","emoji":"📈","start":"06:30","end":"13:00","color":"#8bdfc8"},
+      {"title":"Metrics + Review","emoji":"📊","start":"13:30","end":"14:30","color":"#cfc5ff"},
+      {"title":"Follow-ups","emoji":"📧","start":"15:00","end":"16:00","color":"#ffd1dc"},
+      {"title":"Post: Weekend Prep","emoji":"🗓️","start":"16:30","end":"16:45","color":"#ffe6b3","importance":"high"}
+    ],
+    "sat": [
+      {"title":"Major Study","emoji":"📚","start":"09:00","end":"12:00","color":"#cfc5ff"},
+      {"title":"Legend Room Dev","emoji":"🤖","start":"13:00","end":"15:00","color":"#cfc5ff"},
+      {"title":"Long-form Content","emoji":"📝","start":"15:00","end":"16:30","color":"#ffe6b3"},
+      {"title":"Date Night","emoji":"💑","start":"19:00","end":"21:30","color":"#ffd1dc"}
+    ],
+    "sun": [
+      {"title":"Strategic Planning","emoji":"🧭","start":"09:00","end":"11:00","color":"#d6e4ff"},
+      {"title":"Market Analysis","emoji":"📈","start":"11:00","end":"12:00","color":"#8bdfc8"},
+      {"title":"Family","emoji":"👨‍👩‍👧","start":"13:00","end":"16:00","color":"#ffd1dc"},
+      {"title":"Reset","emoji":"😴","start":"20:00","end":"21:00","color":"#eaeaea"}
+    ]
   }
 }

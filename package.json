@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
-    "watch": "eleventy --watch",
-    "clean": "rm -rf _site",
-    "start": "npm run serve",
-    "pdf": "node scripts/print-to-pdf.js"
+    "prebuild": "node scripts/generate-qr.mjs",
+    "build": "npx @11ty/eleventy",
+    "dev": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve --port=8080",
+    "export:pdf": "node scripts/export-pdf-digital.mjs",
+    "export:all": "npm run build && npm run export:pdf"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +15,7 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "puppeteer": "^24.19.0"
+    "puppeteer": "^24.19.0",
+    "qrcode": "^1.5.4"
   }
 }

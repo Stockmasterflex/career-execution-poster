@@ -1,0 +1,446 @@
+---
+layout: layouts/base.njk
+title: "Phase 1 - Foundation & Immediate Market Entry"
+permalink: /phase1/
+eleventyExcludeFromCollections: true
+---
+
+<div class="phase-page">
+  <div class="hero phase-1">
+    <h1>📌 Phase 1: Foundation & Immediate Market Entry</h1>
+    <div class="tagline">Sept – Dec 2025</div>
+    <div class="phase-badges">
+      <span class="badge">🎓 SIE ✅ Passed</span>
+      <span class="badge">📚 CMT I Study</span>
+      <span class="badge">🌐 Brand Building</span>
+      <span class="badge">🤝 Network Activation</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Certifications & Skills -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🎓</div>
+        <div class="h2">Certifications & Skills</div>
+        <div class="sub">Technical Foundation</div>
+      </div>
+      
+      <div class="grid-2">
+        <div class="card card--phase-1">
+          <h3>✅ Completed</h3>
+          <ul class="list">
+            <li>✅ Passed SIE (Sept 6, 2025)</li>
+            <li>✅ Registered CMT Level I → Dec exam</li>
+            <li>✅ GitHub portfolio ready</li>
+          </ul>
+        </div>
+        
+        <div class="card card--phase-1">
+          <h3>📚 In Progress</h3>
+          <ul class="list">
+            <li>Study: 15–20 hrs/week</li>
+            <li>Daily trade journal with R:R</li>
+            <li>Legend Room AI documentation</li>
+            <li>Technical analysis practice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Branding & Digital Presence -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🌐</div>
+        <div class="h2">Brand & Digital Presence</div>
+        <div class="sub">Professional Identity</div>
+      </div>
+      
+      <div class="grid-3">
+        <div class="card card--phase-1">
+          <h3>Week 1: LinkedIn Overhaul</h3>
+          <ul class="list">
+            <li>Professional headline update</li>
+            <li>About section rewrite</li>
+            <li>Experience optimization</li>
+            <li>Skills & endorsements</li>
+          </ul>
+        </div>
+        
+        <div class="card card--phase-1">
+          <h3>Week 2: Portfolio Website</h3>
+          <ul class="list">
+            <li>Portfolio site launch</li>
+            <li>Technical analysis examples</li>
+            <li>Legend Room project showcase</li>
+            <li>Contact & resume integration</li>
+          </ul>
+        </div>
+        
+        <div class="card card--phase-1">
+          <h3>Content Strategy</h3>
+          <ul class="list">
+            <li>Mon: Market outlook posts</li>
+            <li>Wed: Educational content</li>
+            <li>Fri: Preparation updates</li>
+            <li>Monthly: Deep-dive analysis</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking & Applications -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🤝</div>
+        <div class="h2">Networking & Applications</div>
+        <div class="sub">Relationship Building</div>
+      </div>
+      
+      <div class="grid-2">
+        <div class="card card--phase-1">
+          <h3>Professional Groups</h3>
+          <ul class="list">
+            <li>Join CFA SF + CMT Bay Area</li>
+            <li>2 info interviews/week</li>
+            <li>Monthly: 2 CFA + 2 FinTech + 1 trading event</li>
+            <li>Daily LinkedIn 15m engagement</li>
+          </ul>
+        </div>
+        
+        <div class="card card--phase-1">
+          <h3>Application Strategy</h3>
+          <ul class="list">
+            <li>Applications 15–20/week</li>
+            <li>Targets: 50+ apps by Dec</li>
+            <li>10+ interviews by Nov</li>
+            <li>2–3 offers by year-end</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Companies -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🎯</div>
+        <div class="h2">Target Companies</div>
+        <div class="sub">Tier 1 + FinTech Focus</div>
+      </div>
+      
+      <div class="grid-2">
+        <div class="card pill ok">
+          <h3>Tier 1A — Highest Success Probability</h3>
+          {% for c in plan.targets.tier1A or [] %}
+            <div class="company">
+              <div class="n">{{ loop.index }}.</div>
+              <div>
+                <div class="nm">{{ c[0] }}</div>
+                <div class="muted">{{ c[1] }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        
+        <div class="card pill info">
+          <h3>Tier 1B — FinTech/Tech-Finance</h3>
+          {% for c in plan.targets.tier1B or [] %}
+            <div class="company">
+              <div class="n">{{ loop.index + 5 }}.</div>
+              <div>
+                <div class="nm">{{ c[0] }}</div>
+                <div class="muted">{{ c[1] }}</div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="card pill warn" style="margin-top: 20px">
+        <h3>Tier 2 — Expanding Opportunities</h3>
+        <div class="grid-2">
+          <div>
+            {% for c in plan.targets.tier2 or [] %}
+              {% if loop.index <= 3 %}
+                <div class="company">
+                  <div class="n">{{ loop.index + 10 }}.</div>
+                  <div>
+                    <div class="nm">{{ c[0] }}</div>
+                    <div class="muted">{{ c[1] }}</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div>
+            {% for c in plan.targets.tier2 or [] %}
+              {% if loop.index > 3 %}
+                <div class="company">
+                  <div class="n">{{ loop.index + 10 }}.</div>
+                  <div>
+                    <div class="nm">{{ c[0] }}</div>
+                    <div class="muted">{{ c[1] }}</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phase 1 KPIs -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">📊</div>
+        <div class="h2">Phase 1 KPIs</div>
+        <div class="sub">Sept – Dec 2025 Progress</div>
+      </div>
+      
+      <div class="kpi-tracker">
+        {% for kpi in plan.kpiTracker or [] %}
+        <div class="kpi-card">
+          <div class="kpi-card__head">
+            <h4>{{ kpi.title }}</h4>
+            <div class="kpi-meta">Goal: {{ kpi.goal }}{{ kpi.unit }} by Dec</div>
+            <div class="kpi-week">This week: {{ kpi.thisWeek }} <span class="kpi-week__target">({{ kpi.weeklyTarget }})</span></div>
+          </div>
+
+          <div class="kpi-bar kpi-bar--week">
+            <span style="width: {{ (kpi.thisWeek / 10) * 100 }}%"></span>
+          </div>
+
+          <div class="kpi-bar">
+            <span style="width: {{ (kpi.current / kpi.goal) * 100 }}%"></span>
+          </div>
+
+          <div class="kpi-figures">
+            <span class="current">{{ kpi.current }} / {{ kpi.goal }}{{ kpi.unit }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Financial Runway -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">💰</div>
+        <div class="h2">Financial Runway Tracker</div>
+        <div class="sub">Sept 2025 – Feb 2026</div>
+      </div>
+      
+      <div class="fin-3">
+        <div class="card pill info">
+          <h3>📊 Revised Budget</h3>
+          <div class="list">
+            <div class="company">
+              <div class="nm">Living Expenses (5 months)</div>
+              <div style="margin-left:auto;font-weight:700">${{ budget.living or 0 }}</div>
+            </div>
+            {% for p in budget.pro or [] %}
+              <div class="company">
+                <div class="nm">{{ p[0] }}</div>
+                <div style="margin-left:auto;font-weight:700">${{ p[1] }}</div>
+              </div>
+            {% endfor %}
+            <div class="company" style="border-top:2px solid var(--ring);margin-top:8px;padding-top:8px">
+              <div class="nm"><strong>Total 5-Month Budget</strong></div>
+              <div style="margin-left:auto;font-weight:900">
+                ${{ (budget.living or 0) + 550 + 1000 + 400 + 600 + 450 }}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card pill ok">
+          <h3>💵 Revenue Bridge Options</h3>
+          {% for b in plan.bridges or [] %}
+            <div class="company">
+              <div class="nm">{{ b[0] }}</div>
+              <div style="margin-left:auto">{{ b[1] }}</div>
+            </div>
+          {% endfor %}
+        </div>
+        
+        <div class="card pill warn">
+          <h3>🚨 Emergency Protocols</h3>
+          {% for z in plan.emergency or [] %}
+            <div class="alert alert-{{ z[2] }}">{{ z[0] }} — {{ z[1] }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <!-- Runway Math (Update Weekly) -->
+      <section class="card write-box write-box--wide no-break">
+        <div class="card__head"><h3>📊 Runway Math (Update Weekly)</h3></div>
+        <div class="writing-area" aria-label="Handwriting area for Runway Math">
+          <div class="writing-lines">
+            <div></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">📈</div>
+        <div class="h2">Phase 1 Success Metrics</div>
+        <div class="sub">Sept – Dec 2025</div>
+      </div>
+      
+      <div class="metrics">
+        {% for k,items in plan.kpisPhase1 or {} %}
+          <div class="card metric">
+            <h3 style="margin:0 0 10px">{{ k }}</h3>
+            <ul class="list">
+              {% for it in items or [] %}
+                <li>✅ {{ it }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🧭</div>
+        <div class="h2">Navigation</div>
+        <div class="sub">Quick Access</div>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/dashboard/" class="nav-link">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="/phase2/" class="nav-link">
+          <span class="nav-icon">🎯</span>
+          <span class="nav-text">Phase 2</span>
+        </a>
+        <a href="/phase3/" class="nav-link">
+          <span class="nav-icon">📈</span>
+          <span class="nav-text">Phase 3</span>
+        </a>
+        <a href="/phase4/" class="nav-link">
+          <span class="nav-icon">🏆</span>
+          <span class="nav-text">Phase 4</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+.phase-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.phase-page .hero {
+  padding: 40px 32px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.phase-page .hero.phase-1 {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.phase-page .hero h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.phase-page .hero .tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  opacity: .95;
+  margin-bottom: 16px;
+}
+
+.phase-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.phase-badges .badge {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.phase-badges .badge:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.phase-page .content {
+  padding: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+.nav-text {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .phase-page .content {
+    padding: 20px;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+  }
+  
+  .phase-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>

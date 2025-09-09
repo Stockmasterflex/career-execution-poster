@@ -1,0 +1,13 @@
+{# sections/emergency.njk #}
+<section class="panel">
+  <h2>Emergency Protocols</h2>
+  <div class="grid" style="grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;">
+    {% for e in emergency %}
+      <article class="panel">
+        <h3>{{ e.zone }}</h3>
+        <p class="pill">{{ e.rule }}</p>
+        <p>{{ e.action }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

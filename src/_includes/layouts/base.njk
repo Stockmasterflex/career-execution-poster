@@ -1,157 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or "Career Execution Poster" }}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/print.css" media="print">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.4;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        h1 { font-size: 3rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 2rem; }
-        h4 { font-size: 1.5rem; }
-        
-        .section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: #1a1a1a;
-            border-radius: 12px;
-            border: 1px solid #333;
-        }
-        
-        .grid {
-            display: grid;
-            gap: 1rem;
-        }
-        
-        .grid-2 { grid-template-columns: repeat(2, 1fr); }
-        .grid-3 { grid-template-columns: repeat(3, 1fr); }
-        .grid-4 { grid-template-columns: repeat(4, 1fr); }
-        
-        .card {
-            background: #2a2a2a;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #444;
-        }
-        
-        .tier-list {
-            list-style: none;
-        }
-        
-        .tier-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #444;
-        }
-        
-        .tier-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .milestone {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background: #2a2a2a;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        
-        .budget-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #444;
-        }
-        
-        .budget-item:last-child {
-            border-bottom: none;
-        }
-        
-        .highlight {
-            color: #60a5fa;
-            font-weight: 600;
-        }
-        
-        .success {
-            color: #34d399;
-        }
-        
-        .warning {
-            color: #fbbf24;
-        }
-        
-        .pill {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #1a1a1a;
-            color: #60a5fa;
-            text-decoration: none;
-            border-radius: 20px;
-            border: 1px solid #444;
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            transition: all 0.2s ease;
-        }
-        
-        .pill:hover {
-            background: #2a2a2a;
-            color: #93c5fd;
-            border-color: #60a5fa;
-        }
-        
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
-            
-            .section {
-                background: white;
-                border: 2px solid #000;
-                page-break-inside: avoid;
-            }
-            
-            .card {
-                background: #f8f9fa;
-                border: 1px solid #000;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title or (meta.title if meta else "Career Execution Poster") }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/career-os.css">
+  <link rel="stylesheet" href="/styles/poster.css">
+  <link rel="stylesheet" href="/styles/print.css" media="print">
 </head>
-<body>
-    <div class="container">
-        {{ content | safe }}
-    </div>
+{% set qsSize = page.url | urlSearchParam('size') %}
+{% set size = qsSize or print.size %}
+{% if size == '12x18' %}
+  {% set sizeClass = '12x18' %}
+{% else %}
+  {% set sizeClass = '24x36' %}
+{% endif %}
+<body class="poster-page poster--{{ sizeClass }}">
+  {{ content | safe }}
 </body>
 </html>
