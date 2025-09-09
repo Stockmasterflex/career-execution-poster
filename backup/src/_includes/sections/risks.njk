@@ -1,0 +1,14 @@
+{# sections/risks.njk #}
+<section class="panel">
+  <h2>Derailers & Risk Mitigation</h2>
+  <div class="grid split">
+    <div class="panel">
+      <h3>Derailers</h3>
+      <ul class="goals">{% for d in derailers %}<li>❌ {{ d }}</li>{% endfor %}</ul>
+    </div>
+    <div class="panel">
+      <h3>Mitigation</h3>
+      <ul class="goals">{% for r in riskMitigation %}<li>🛡️ {{ r }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>

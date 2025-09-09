@@ -1,0 +1,493 @@
+---
+layout: layouts/base.njk
+permalink: poster/index.html
+eleventyExcludeFromCollections: true
+---
+{% set plan = plan or {} %}
+{% set meta = plan.meta or {} %}
+{% set status = plan.status or [] %}
+{% set phases = plan.phases or [] %}
+{% set companies = plan.companies or {} %}
+{% set daily = plan.daily or {} %}
+{% set weekly = plan.weekly or [] %}
+{% set weeklyTimed = plan.weeklyTimed or [] %}
+{% set budget = plan.budget or {} %}
+{% set protocols = plan.protocols or {} %}
+{% set kpis = plan.kpis or {} %}
+{% set victories = plan.victories or [] %}
+{% set northStar = plan.northStar or {} %}
+
+
+{% if meta.debug %}
+<pre style="background:#111;color:#0f0;padding:12px;white-space:pre-wrap;max-height:240px;overflow:auto;">
+DEBUG meta: {{ meta | dump }}
+DEBUG phases[0]: {{ (phases[0] or {}) | dump }}
+</pre>
+{% endif %}
+
+<div class="poster">
+
+  <div class="hero">
+    <h1>🚀 {{ meta.title or "Career Execution Poster" }}</h1>
+    <div class="tagline">{{ meta.subtitle or "Your path to success" }}</div>
+    {% if meta.badges and (meta.badges | length) %}
+      <div class="badges">
+        {% for b in meta.badges %}
+          <div class="badge">{{ b }}</div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="muted">Add badges in src/_data/plan.json → meta.badges</div>
+    {% endif %}
+    
+    
+    <!-- Today's Focus -->
+    <section class="card write-box write-box--wide no-break">
+      <div class="card__head"><h3>📝 Today's Focus</h3></div>
+      <div class="writing-area" aria-label="Handwriting area for Today's Focus">
+        <div class="writing-lines"><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-head">
+        <div class="icon">📌</div><div class="h2">Current Status & Foundation</div>
+      </div>
+      <div class="grid-2">
+        {% for c in plan.current or [] %}
+          <div class="card">{{ c }}</div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% for ph in phases %}
+      <div class="section">
+        <div class="section-head">
+          <div class="icon">{{ loop.index }}</div>
+          <div class="h2">{{ ph.name }}</div>
+          <div class="sub">{{ ph.dates }}</div>
+        </div>
+        <div class="grid-3">
+          {% for p in ph.pillars %}
+            <div class="card phase-card ph{{ loop.index }}">
+              <h3 style="margin:0 0 10px;font-weight:800">{{ p.title }}</h3>
+              <ul class="list">
+                {% for it in p.items %}<li>{{ it }}</li>{% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="section">
+      <div class="section-head"><div class="icon">🎯</div><div class="h2">Target Companies — Phase 1</div><div class="sub">Research & Relationships</div></div>
+      <div class="grid-2">
+        <div class="card pill ok">
+          <h3 style="margin:0 0 10px">Tier 1 Priority — Highest Success Probability</h3>
+          {% for c in plan.targets.tier1A or [] %}
+            <div class="company"><div class="n">{{ loop.index }}.</div><div><div class="nm">{{ c[0] }}</div><div class="muted">{{ c[1] }}</div></div></div>
+          {% endfor %}
+        </div>
+        <div class="card pill info">
+          <h3 style="margin:0 0 10px">Tier 1 Priority — FinTech/Tech-Finance</h3>
+          {% for c in plan.targets.tier1B or [] %}
+            <div class="company"><div class="n">{{ loop.index + 5 }}.</div><div><div class="nm">{{ c[0] }}</div><div class="muted">{{ c[1] }}</div></div></div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card pill warn" style="margin-top:20px">
+        <h3 style="margin:0 0 10px">Tier 2 — Expanding Opportunities</h3>
+        <div class="grid-2">
+          <div>
+            {% for c in plan.targets.tier2 or [] %}
+              {% if loop.index <= 3 %}
+                <div class="company"><div class="n">{{ loop.index + 10 }}.</div><div><div class="nm">{{ c[0] }}</div><div class="muted">{{ c[1] }}</div></div></div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div>
+            {% for c in plan.targets.tier2 or [] %}
+              {% if loop.index > 3 %}
+                <div class="company"><div class="n">{{ loop.index + 10 }}.</div><div><div class="nm">{{ c[0] }}</div><div class="muted">{{ c[1] }}</div></div></div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><div class="icon">⏰</div><div class="h2">Daily Non-Negotiables</div><div class="sub">2 Hours Total</div></div>
+      <div class="daily">
+        <div class="hour">
+          <h3>🌅 Morning Power Hour (60 min)</h3>
+          <ul class="list">
+            <li>Market review (25 min)</li>
+            <li>CMT study (25 min)</li>
+            <li>LinkedIn engagement + planning (10 min)</li>
+          </ul>
+        </div>
+        <div class="hour">
+          <h3>🌆 Evening Power Hour (60 min)</h3>
+          <ul class="list">
+            <li>Close review + tomorrow's setup (20 min)</li>
+            <li>Networking DMs or content creation (25 min)</li>
+            <li>Goals review + next-day plan (15 min)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="icon">📅</div>
+        <div class="h2">Weekly Execution (Mon–Sun)</div>
+        <div class="sub">Color-Coded Time Blocks</div>
+      </div>
+      
+      <!-- Week Status Band -->
+      <div class="statusband">
+        Phase 1 • Week __ • Sept–Dec 2025 • Days left: __
+      </div>
+      
+      <!-- Pipeline Counters -->
+      <div class="mini-metrics">
+        <div class="mini-metric">
+          <h4>Leads</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Apps (wk)</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Interviews</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Offers</h4>
+          <div class="metric-number">__</div>
+        </div>
+      </div>
+
+      <!-- Weekday Structure -->
+      <div class="weekday-structure">
+        <h3 style="margin: 30px 0 20px; font-size: 20px; font-weight: 700; color: var(--ink);">Monday – Friday (Structured Blocks)</h3>
+        <div class="time-blocks">
+          <div class="time-block gym">
+            <div class="block-header">
+              <span class="badge badge--gym" aria-label="Gym">💪 Gym</span>
+              <span class="chip chip--time">{{ "05:30–07:00" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Gym First Thing</div>
+            <div class="block-details">
+              <div class="workout-rotation">
+                <div class="workout-day"><strong>Mon:</strong> Chest + Triceps</div>
+                <div class="workout-day"><strong>Tue:</strong> Back + Biceps</div>
+                <div class="workout-day"><strong>Wed:</strong> Core + Cardio</div>
+                <div class="workout-day"><strong>Thu:</strong> Shoulders + Arms</div>
+                <div class="workout-day"><strong>Fri:</strong> Legs + Glutes</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="time-block meals">
+            <div class="block-header">
+              <span class="badge badge--meal" aria-label="Meals">🍽️ Meals</span>
+              <span class="chip chip--time">{{ "07:00–07:30" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Shower + Breakfast</div>
+            <div class="block-details">
+              Always after gym - fuel for the day
+            </div>
+          </div>
+
+          <div class="time-block market">
+            <div class="block-header">
+              <span class="badge badge--market" aria-label="Market">📈 Market</span>
+              <span class="chip chip--time">{{ "06:30–13:00" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Market Prep + Trading</div>
+            <div class="block-details">
+              Charting, analysis, trade journaling, and post creation<br>
+              (LinkedIn, Twitter, website content)
+            </div>
+          </div>
+
+          <div class="time-block meals">
+            <div class="block-header">
+              <span class="badge badge--meal" aria-label="Meals">🍽️ Meals</span>
+              <span class="chip chip--time">{{ "13:00–13:30" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Lunch</div>
+            <div class="block-details">
+              After market close - trade journal review
+            </div>
+          </div>
+
+          <div class="time-block study">
+            <div class="block-header">
+              <span class="badge badge--study" aria-label="Study">📚 Study</span>
+              <span class="chip chip--time">{{ "14:00–15:00" | timerange12 }}</span>
+            </div>
+            <div class="block-title">CMT Study</div>
+            <div class="block-details">
+              Monday–Friday focused study session
+            </div>
+          </div>
+
+          <div class="time-block career">
+            <div class="block-header">
+              <span class="badge badge--network" aria-label="Networking">🤝 Networking & Apps</span>
+              <span class="chip chip--time">{{ "15:00–17:00" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Career Ops</div>
+            <div class="block-details">
+              <div class="career-rotation">
+                <div class="career-day"><strong>Mon/Wed/Fri:</strong> Networking & Applications</div>
+                <div class="career-day"><strong>Tue/Thu:</strong> Content & Branding (posts, website, portfolio)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="time-block family">
+            <div class="block-header">
+              <span class="badge badge--family" aria-label="Family">🏡 Family/Recharge</span>
+              <span class="chip chip--time">{{ "18:00–20:00" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Dinner + Evening Flex</div>
+            <div class="block-details">
+              Light networking, study review, family time
+            </div>
+          </div>
+
+          <div class="time-block admin">
+            <div class="block-header">
+              <span class="badge badge--admin" aria-label="Admin">📋 Admin Buffer</span>
+              <span class="chip chip--time">{{ "17:00–17:30" | timerange12 }}</span>
+            </div>
+            <div class="block-title">Friday Admin Buffer</div>
+            <div class="block-details">
+              <ul class="admin-checklist">
+                <li>Inbox cleanup</li>
+                <li>Schedule next week</li>
+                <li>Receipts/budget</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekend Structure -->
+      <div class="weekend-structure">
+        <h3 style="margin: 30px 0 20px; font-size: 20px; font-weight: 700; color: var(--ink);">Weekend Focus Blocks</h3>
+        <div class="weekend-blocks">
+          <div class="weekend-block saturday">
+            <div class="weekend-header">
+              <span class="weekend-icon">📅</span>
+              <span class="weekend-day">Saturday</span>
+            </div>
+            <div class="weekend-content">
+              <div class="weekend-activity study">📚 Major CMT Study (3–4 hrs)</div>
+              <div class="weekend-activity content">🤖 Legend Room dev or long-form content</div>
+              <div class="weekend-activity family">💑 Recharge (Date night/friends)</div>
+            </div>
+          </div>
+
+          <div class="weekend-block sunday">
+            <div class="weekend-header">
+              <span class="weekend-icon">🧭</span>
+              <span class="weekend-day">Sunday</span>
+            </div>
+            <div class="weekend-content">
+              <div class="weekend-activity study">📊 Strategic Planning + Market Outlook</div>
+              <div class="weekend-activity family">👨‍👩‍👧 Family + Reset</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Output Check Strip -->
+      <section class="daily-output">
+        <h3 class="h5">Daily Output (Mon–Fri)</h3>
+        <ul class="do-list">
+          <li><input type="checkbox" /> Ship 1 post or 1 substantive comment</li>
+          <li><input type="checkbox" /> Send 2–3 networking DMs (MWF)</li>
+          <li><input type="checkbox" /> Update trade journal</li>
+          <li><input type="checkbox" /> CMT study 60 min</li>
+        </ul>
+      </section>
+      
+      <!-- Streak Ticks -->
+      <section class="streak">
+        <div class="streak-row">
+          <span class="streak-label">Gym</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">CMT</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">Posts</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">DMs</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <div class="icon">📊</div>
+        <div class="h2">Phase 1 KPI Tracker</div>
+        <div class="sub">Sept – Dec 2025 Progress</div>
+      </div>
+      
+      <div class="kpi-tracker">
+        {% for kpi in plan.kpiTracker or [] %}
+        <div class="kpi-card">
+          <div class="kpi-card__head">
+            <h4>{{ kpi.title }}</h4>
+            <div class="kpi-meta">Goal: {{ kpi.goal }}{{ kpi.unit }} by Dec</div>
+            <div class="kpi-week">This week: {{ kpi.thisWeek }} <span class="kpi-week__target">({{ kpi.weeklyTarget }})</span></div>
+          </div>
+
+          <div class="kpi-bar kpi-bar--week">
+            <span style="width: {{ (kpi.thisWeek / 10) * 100 }}%"></span>
+          </div>
+
+          <div class="kpi-bar">
+            <span style="width: {{ (kpi.current / kpi.goal) * 100 }}%"></span>
+          </div>
+
+          <div class="kpi-figures">
+            <span class="current">{{ kpi.current }} / {{ kpi.goal }}{{ kpi.unit }}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><div class="icon">💰</div><div class="h2">Financial Planning & Runway Optimization</div><div class="sub">Sept 2025 – Feb 2026</div></div>
+      <div class="fin-3">
+        <div class="card pill info">
+          <h3>📊 Revised Budget</h3>
+          <div class="list">
+            <div class="company"><div class="nm">Living Expenses (5 months)</div><div style="margin-left:auto;font-weight:700">${{ budget.living or 0 }}</div></div>
+            {% for p in budget.pro or [] %}
+              <div class="company"><div class="nm">{{ p[0] }}</div><div style="margin-left:auto;font-weight:700">${{ p[1] }}</div></div>
+            {% endfor %}
+            <div class="company" style="border-top:2px solid var(--ring);margin-top:8px;padding-top:8px">
+              <div class="nm"><strong>Total 5-Month Budget</strong></div>
+              <div style="margin-left:auto;font-weight:900">
+                ${{ (budget.living or 0) + 550 + 1000 + 400 + 600 + 450 }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card pill ok">
+          <h3>💵 Revenue Bridge Options</h3>
+          {% for b in plan.bridges or [] %}<div class="company"><div class="nm">{{ b[0] }}</div><div style="margin-left:auto">{{ b[1] }}</div></div>{% endfor %}
+        </div>
+        <div class="card pill warn">
+          <h3>🚨 Emergency Protocols</h3>
+          {% for z in plan.emergency or [] %}
+            <div class="alert alert-{{ z[2] }}">{{ z[0] }} — {{ z[1] }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      
+      <!-- Runway Math (Update Weekly) -->
+      <section class="card write-box write-box--wide no-break">
+        <div class="card__head"><h3>📊 Runway Math (Update Weekly)</h3></div>
+        <div class="writing-area" aria-label="Handwriting area for Runway Math">
+          <div class="writing-lines"><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><div class="icon">📈</div><div class="h2">Phase 1 Success Metrics & KPIs</div><div class="sub">Sept – Dec 2025</div></div>
+      <div class="metrics">
+        {% for k,items in plan.kpisPhase1 or {} %}
+          <div class="card metric">
+            <h3 style="margin:0 0 10px">{{ k }}</h3>
+            <ul class="list">{% for it in items or [] %}<li>✅ {{ it }}</li>{% endfor %}</ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><div class="icon">🏆</div><div class="h2">Victory Celebration Milestones</div></div>
+      <div class="victories">
+        {% for v in plan.victories or [] %}
+          <div class="v v{{ loop.index }}">
+            <div style="font-size:44px">{{ ['🥉','🥈','🥇','🏆'][loop.index0] }}</div>
+            <h3 style="margin:6px 0 0">{{ v[0] }}</h3>
+            <div style="opacity:.9;margin-bottom:10px">{{ v[1] }}</div>
+            <ul class="list" style="border:none">{% for x in v[2] or [] %}<li style="border:none">✅ {{ x }}</li>{% endfor %}</ul>
+            <div style="font-style:italic;margin-top:8px">🎉 {{ v[3] }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="north">
+      <h2 style="font-size:36px;font-weight:900;margin:0 0 12px">🚀 Your North Star Commitment</h2>
+      <p><strong>TRANSFORMATION:</strong> {{ northStar.transformation or "Your transformation story" }}</p>
+      <p><strong>DAILY MANTRA:</strong> "{{ northStar.mantra or "Your daily mantra" }}"</p>
+      <p><strong>WEEKLY FOCUS:</strong> "{{ northStar.weeklyFocus or "Your weekly focus" }}"</p>
+      <p><strong>MONTHLY REMINDER:</strong> "{{ northStar.monthlyReminder or "Your monthly reminder" }}"</p>
+    </div>
+
+    <footer class="poster-footer">
+      <div class="qr-pair">
+        <div class="qr">
+          <img src="/assets/qr-site.png" alt="Portfolio QR" />
+          <div>Portfolio</div>
+        </div>
+        <div class="qr">
+          <img src="/assets/qr-tracker.png" alt="KPI Tracker QR" />
+          <div>KPI Sheet</div>
+        </div>
+      </div>
+      <div class="version">
+        v2025-01-15 • {{ meta.siteUrl }}
+      </div>
+    </footer>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{# sections/tiers_per_phase.njk #}
+{% for ph in phases %}
+<section class="panel">
+  <h2>{{ ph.title }} — Target Companies</h2>
+  <div class="grid tiers">
+    {% for key in ["tier1a","tier1b","tier2","tier3"] %}
+      <div class="tier panel">
+        <h3>{{ key | replace("tier","Tier ") | upper }}</h3>
+        {% set list = ph.tiers[key] or [] %}
+        {% if list | length %}
+          <ul>{% for c in list %}<li>{{ c }}</li>{% endfor %}</ul>
+        {% else %}
+          <div class="pill">Add targets as they emerge</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

@@ -1,0 +1,118 @@
+@import '../src/styles/tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+  
+  /* App background from design tokens */
+  html, body {
+    background: var(--bg-app);
+    min-height: 100vh;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .glass-card {
+    @apply bg-bg-card border border-gray-200 rounded-card shadow-card;
+  }
+  
+  .phase-gradient-1 {
+    @apply bg-gradient-phase-1;
+  }
+  
+  .phase-gradient-2 {
+    @apply bg-gradient-phase-2;
+  }
+  
+  .phase-gradient-3 {
+    @apply bg-gradient-phase-3;
+  }
+  
+  .phase-gradient-4 {
+    @apply bg-gradient-phase-4;
+  }
+  
+  .dashboard-bg {
+    @apply bg-gradient-dashboard;
+  }
+  
+  .section-header {
+    @apply flex items-center gap-3 mb-4;
+  }
+  
+  .section-icon {
+    @apply w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center text-white;
+  }
+  
+  .section-title {
+    @apply text-xl font-bold text-text-primary;
+  }
+  
+  .section-subtitle {
+    @apply text-sm text-text-muted ml-auto;
+  }
+  
+  .kpi-card {
+    @apply bg-bg-card rounded-card p-4 shadow-card border border-gray-200;
+  }
+  
+  .time-block {
+    @apply rounded-lg p-3 shadow-sm border border-gray-200;
+  }
+  
+  .time-block-gym {
+    @apply bg-time-gym;
+  }
+  
+  .time-block-study {
+    @apply bg-time-study;
+  }
+  
+  .time-block-network {
+    @apply bg-time-network;
+  }
+  
+  .time-block-content {
+    @apply bg-time-content;
+  }
+  
+  .time-block-meals {
+    @apply bg-time-meals;
+  }
+  
+  .time-block-family {
+    @apply bg-time-family;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2;
+  }
+  
+  .progress-fill {
+    @apply h-2 rounded-full transition-all duration-300;
+  }
+  
+  .nav-tab {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-colors;
+  }
+  
+  .nav-tab-active {
+    @apply bg-green-500 text-white;
+  }
+  
+  .nav-tab-inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+  }
+}

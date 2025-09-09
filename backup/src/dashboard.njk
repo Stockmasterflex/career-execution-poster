@@ -1,0 +1,622 @@
+---
+layout: layouts/base.njk
+title: "Dashboard - Daily Use"
+permalink: /dashboard/
+eleventyExcludeFromCollections: true
+---
+
+<div class="dashboard">
+  <div class="hero">
+    <h1>🏠 Career OS Dashboard</h1>
+    <div class="tagline">Daily Execution & Weekly Planning</div>
+    <div class="date-info">Today's Date</div>
+  </div>
+
+  <div class="content">
+    <!-- Today's Focus Section -->
+    <section class="card write-box write-box--wide no-break">
+      <div class="card__head">
+        <h3>📝 Today's Focus</h3>
+        <div class="focus-day">Today</div>
+      </div>
+      <div class="writing-area" aria-label="Handwriting area for Today's Focus">
+        <div class="writing-lines">
+          <div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Non-Negotiables -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">⏰</div>
+        <div class="h2">Daily Non-Negotiables</div>
+        <div class="sub">2 Hours Total</div>
+      </div>
+      
+      <div class="daily-routine">
+        <div class="routine-block morning">
+          <div class="routine-header">
+            <span class="routine-icon">🌅</span>
+            <span class="routine-title">Morning Power Hour (60 min)</span>
+            <span class="routine-time">5:30 AM - 6:30 AM</span>
+          </div>
+          <div class="routine-tasks">
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">📈 Market analysis + trade journal (25 min)</span>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">📚 CMT study or skill dev (25 min)</span>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">💬 LinkedIn engagement + content planning (10 min)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="routine-block evening">
+          <div class="routine-header">
+            <span class="routine-icon">🌆</span>
+            <span class="routine-title">Evening Power Hour (60 min)</span>
+            <span class="routine-time">7:00 PM - 8:00 PM</span>
+          </div>
+          <div class="routine-tasks">
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">📊 Close review + tomorrow's setup (20 min)</span>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">🤝 Outreach or content creation (25 min)</span>
+            </div>
+            <div class="task">
+              <input type="checkbox" class="task-checkbox" />
+              <span class="task-text">🎯 Goals review + next-day plan (15 min)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Execution Schedule -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">📅</div>
+        <div class="h2">Weekly Execution Schedule</div>
+        <div class="sub">Color-Coded Time Blocks</div>
+      </div>
+
+      <!-- Week Status Band -->
+      <div class="statusband">
+        Phase 1 • Week __ • Sept–Dec 2025 • Days left: __
+      </div>
+
+      <!-- Pipeline Counters -->
+      <div class="mini-metrics">
+        <div class="mini-metric">
+          <h4>Leads</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Apps (wk)</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Interviews</h4>
+          <div class="metric-number">__</div>
+        </div>
+        <div class="mini-metric">
+          <h4>Offers</h4>
+          <div class="metric-number">__</div>
+        </div>
+      </div>
+
+      <!-- Weekday Structure -->
+      <div class="weekday-structure">
+        <h3>Monday – Friday (Structured Blocks)</h3>
+        <div class="time-blocks">
+          <div class="time-block gym">
+            <div class="block-header">
+              <span class="badge badge--gym">💪 Gym</span>
+              <span class="chip chip--time">5:30 AM – 7:00 AM</span>
+            </div>
+            <div class="block-title">Gym First Thing</div>
+            <div class="block-details">
+              <div class="workout-rotation">
+                <div class="workout-day"><strong>Mon:</strong> Chest + Triceps</div>
+                <div class="workout-day"><strong>Tue:</strong> Back + Biceps</div>
+                <div class="workout-day"><strong>Wed:</strong> Core + Cardio</div>
+                <div class="workout-day"><strong>Thu:</strong> Shoulders + Arms</div>
+                <div class="workout-day"><strong>Fri:</strong> Legs + Glutes</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="time-block market">
+            <div class="block-header">
+              <span class="badge badge--market">📈 Market</span>
+              <span class="chip chip--time">6:30 AM – 1:00 PM</span>
+            </div>
+            <div class="block-title">Market Prep + Trading</div>
+            <div class="block-details">
+              Charting, analysis, trade journaling, and post creation<br>
+              (LinkedIn, Twitter, website content)
+            </div>
+          </div>
+
+          <div class="time-block study">
+            <div class="block-header">
+              <span class="badge badge--study">📚 Study</span>
+              <span class="chip chip--time">2:00 PM – 3:00 PM</span>
+            </div>
+            <div class="block-title">CMT Study</div>
+            <div class="block-details">
+              Monday–Friday focused study session
+            </div>
+          </div>
+
+          <div class="time-block career">
+            <div class="block-header">
+              <span class="badge badge--network">🤝 Networking & Apps</span>
+              <span class="chip chip--time">3:00 PM – 5:00 PM</span>
+            </div>
+            <div class="block-title">Career Ops</div>
+            <div class="block-details">
+              <div class="career-rotation">
+                <div class="career-day"><strong>Mon/Wed/Fri:</strong> Networking & Applications</div>
+                <div class="career-day"><strong>Tue/Thu:</strong> Content & Branding (posts, website, portfolio)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="time-block family">
+            <div class="block-header">
+              <span class="badge badge--family">🏡 Family/Recharge</span>
+              <span class="chip chip--time">6:00 PM – 8:00 PM</span>
+            </div>
+            <div class="block-title">Dinner + Evening Flex</div>
+            <div class="block-details">
+              Light networking, study review, family time
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekend Structure -->
+      <div class="weekend-structure">
+        <h3>Weekend Focus Blocks</h3>
+        <div class="weekend-blocks">
+          <div class="weekend-block saturday">
+            <div class="weekend-header">
+              <span class="weekend-icon">📅</span>
+              <span class="weekend-day">Saturday</span>
+            </div>
+            <div class="weekend-content">
+              <div class="weekend-activity study">📚 Major CMT Study (3–4 hrs)</div>
+              <div class="weekend-activity content">🤖 Legend Room dev or long-form content</div>
+              <div class="weekend-activity family">💑 Recharge (Date night/friends)</div>
+            </div>
+          </div>
+
+          <div class="weekend-block sunday">
+            <div class="weekend-header">
+              <span class="weekend-icon">🧭</span>
+              <span class="weekend-day">Sunday</span>
+            </div>
+            <div class="weekend-content">
+              <div class="weekend-activity study">📊 Strategic Planning + Market Outlook</div>
+              <div class="weekend-activity family">👨‍👩‍👧 Family + Reset</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daily Output Check Strip -->
+      <section class="daily-output">
+        <h3>Daily Output (Mon–Fri)</h3>
+        <ul class="do-list">
+          <li><input type="checkbox" /> Ship 1 post or 1 substantive comment</li>
+          <li><input type="checkbox" /> Send 2–3 networking DMs (MWF)</li>
+          <li><input type="checkbox" /> Update trade journal</li>
+          <li><input type="checkbox" /> CMT study 60 min</li>
+        </ul>
+      </section>
+      
+      <!-- Streak Ticks -->
+      <section class="streak">
+        <div class="streak-row">
+          <span class="streak-label">Gym</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">CMT</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">Posts</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+        <div class="streak-row">
+          <span class="streak-label">DMs</span>
+          <div class="streak-squares">
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+            <div class="streak-square"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Phase 1 KPI Strip -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">📊</div>
+        <div class="h2">Phase 1 KPI Progress</div>
+        <div class="sub">Quick Glance - Sept – Dec 2025</div>
+      </div>
+      
+      <div class="kpi-strip">
+        {% for kpi in plan.kpiTracker or [] %}
+        <div class="kpi-mini">
+          <div class="kpi-mini__title">{{ kpi.title }}</div>
+          <div class="kpi-mini__bar">
+            <div class="kpi-mini__fill" style="width: {{ (kpi.current / kpi.goal) * 100 }}%"></div>
+          </div>
+          <div class="kpi-mini__text">{{ kpi.current }} / {{ kpi.goal }}{{ kpi.unit }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="section">
+      <div class="section-head">
+        <div class="icon">🧭</div>
+        <div class="h2">Quick Navigation</div>
+        <div class="sub">Jump to Phase Details</div>
+      </div>
+      
+      <div class="nav-grid">
+        <a href="/phase1/" class="nav-phase phase-1">
+          <div class="nav-phase__icon">📌</div>
+          <div class="nav-phase__title">Phase 1</div>
+          <div class="nav-phase__subtitle">Foundation & Market Entry</div>
+          <div class="nav-phase__dates">Sept–Dec 2025</div>
+        </a>
+        
+        <a href="/phase2/" class="nav-phase phase-2">
+          <div class="nav-phase__icon">🎯</div>
+          <div class="nav-phase__title">Phase 2</div>
+          <div class="nav-phase__subtitle">Interview Intensification</div>
+          <div class="nav-phase__dates">Jan–Mar 2026</div>
+        </a>
+        
+        <a href="/phase3/" class="nav-phase phase-3">
+          <div class="nav-phase__icon">📈</div>
+          <div class="nav-phase__title">Phase 3</div>
+          <div class="nav-phase__subtitle">Performance & Advancement</div>
+          <div class="nav-phase__dates">2026–2027</div>
+        </a>
+        
+        <a href="/phase4/" class="nav-phase phase-4">
+          <div class="nav-phase__icon">🏆</div>
+          <div class="nav-phase__title">Phase 4</div>
+          <div class="nav-phase__subtitle">Mastery & Wealth Building</div>
+          <div class="nav-phase__dates">2028+</div>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dashboard .hero {
+  padding: 40px 32px;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6 50%, #ec4899);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard .hero h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.dashboard .hero .tagline {
+  font-size: 1.125rem;
+  font-weight: 600;
+  opacity: .95;
+  margin-bottom: 8px;
+}
+
+.dashboard .hero .date-info {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.dashboard .content {
+  padding: 32px;
+}
+
+.focus-day {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.daily-routine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.routine-block {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.routine-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.routine-block.morning {
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
+}
+
+.routine-block.evening {
+  border-left: 4px solid #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 91, 246, 0.1), rgba(139, 91, 246, 0.05));
+}
+
+.routine-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.routine-icon {
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 8px;
+}
+
+.routine-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  flex: 1;
+}
+
+.routine-time {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+  background: rgba(100, 116, 139, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.routine-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.task-text {
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.kpi-mini {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.kpi-mini:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kpi-mini__title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-mini__bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.kpi-mini__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.kpi-mini__text {
+  font-size: 11px;
+  font-weight: 600;
+  color: #3b82f6;
+  text-align: center;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.nav-phase {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-phase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+}
+
+.nav-phase:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nav-phase.phase-1 {
+  border-left: 4px solid #f59e0b;
+}
+
+.nav-phase.phase-2 {
+  border-left: 4px solid #06b6d4;
+}
+
+.nav-phase.phase-3 {
+  border-left: 4px solid #10b981;
+}
+
+.nav-phase.phase-4 {
+  border-left: 4px solid #8b5cf6;
+}
+
+.nav-phase__icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.nav-phase__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.nav-phase__subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.nav-phase__dates {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .dashboard .content {
+    padding: 20px;
+  }
+  
+  .daily-routine {
+    grid-template-columns: 1fr;
+  }
+  
+  .kpi-strip {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,18 @@
+<div class="section">
+  <h2>{{ ph.title }} — Target Companies</h2>
+  {% set tiers = ph.tiers or {} %}
+  <div class="grid grid-4">
+    {% for label, list in { 'Tier 1A': tiers.tier1a or [], 'Tier 1B': tiers.tier1b or [], 'Tier 2': tiers.tier2 or [], 'Tier 3': tiers.tier3 or [] } %}
+      <div class="card">
+        <h3>{{ label }}</h3>
+        <ul class="tier-list">
+          {% if list | length %}
+            {% for c in list %}<li>{{ c }}</li>{% endfor %}
+          {% else %}
+            <li style="opacity:.6">Add targets in plan.json</li>
+          {% endif %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>

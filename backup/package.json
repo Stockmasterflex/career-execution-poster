@@ -1,0 +1,21 @@
+{
+  "name": "career-poster",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "node scripts/generate-qr.mjs",
+    "build": "npx @11ty/eleventy",
+    "dev": "ELEVENTY_ENV=dev npx @11ty/eleventy --serve --port=8080",
+    "export:pdf": "node scripts/export-pdf-digital.mjs",
+    "export:all": "npm run build && npm run export:pdf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "puppeteer": "^24.19.0",
+    "qrcode": "^1.5.4"
+  }
+}

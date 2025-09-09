@@ -1,0 +1,72 @@
+/* Career OS Design Tokens - Matching Screenshots */
+
+:root {
+  /* Background Gradients */
+  --bg-app: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #312e81 100%);
+  --bg-phase-1: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  --bg-phase-2: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  --bg-phase-3: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  --bg-phase-4: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  
+  /* Glass Card Styles */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-weight-heavy: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  
+  /* Spacing */
+  --spacing-card: 1.5rem;
+  --spacing-section: 2rem;
+  --spacing-small: 0.75rem;
+  
+  /* Border Radius */
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+  --radius-small: 0.5rem;
+  
+  /* Colors from Screenshots */
+  --color-gym: #dbeafe;
+  --color-study: #e0e7ff;
+  --color-network: #fce7f3;
+  --color-content: #fef3c7;
+  --color-meals: #fed7d7;
+  --color-family: #d1fae5;
+  --color-market: #dcfce7;
+  --color-planning: #f3e8ff;
+}
+
+/* Global App Background */
+.app-bg {
+  background: var(--bg-app);
+  min-height: 100vh;
+}
+
+/* Phase Headers */
+.phase-header-1 { background: var(--bg-phase-1); }
+.phase-header-2 { background: var(--bg-phase-2); }
+.phase-header-3 { background: var(--bg-phase-3); }
+.phase-header-4 { background: var(--bg-phase-4); }
+
+/* Glass Cards */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Time Block Colors */
+.time-gym { background-color: var(--color-gym); }
+.time-study { background-color: var(--color-study); }
+.time-network { background-color: var(--color-network); }
+.time-content { background-color: var(--color-content); }
+.time-meals { background-color: var(--color-meals); }
+.time-family { background-color: var(--color-family); }
+.time-market { background-color: var(--color-market); }
+.time-planning { background-color: var(--color-planning); }

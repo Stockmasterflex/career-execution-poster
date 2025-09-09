@@ -1,0 +1,13 @@
+{# sections/kpis.njk #}
+<section class="panel">
+  <h2>Key Performance Indicators</h2>
+  <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;">
+    {% for pid in ["phase1","phase2","phase3","phase4"] %}
+      {% set list = kpis[pid] %}
+      <article class="panel">
+        <h3>{{ pid | upper }}</h3>
+        <ul class="goals">{% for x in list %}<li>{{ x }}</li>{% endfor %}</ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

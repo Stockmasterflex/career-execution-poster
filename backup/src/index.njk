@@ -1,0 +1,137 @@
+---
+layout: layouts/base.njk
+title: "Career Execution System"
+permalink: /
+---
+
+<div class="hero">
+  <h1>🚀 Kyle's Career Execution System</h1>
+  <div class="tagline">From Unemployed → SIE → CMT → Six-Figure Technical Analyst</div>
+  
+  <div class="nav-cards">
+    <a href="/dashboard/" class="nav-card">
+      <div class="nav-icon">🏠</div>
+      <div class="nav-title">Dashboard</div>
+      <div class="nav-subtitle">Daily use & weekly planning</div>
+    </a>
+    
+    <a href="/phase1/" class="nav-card">
+      <div class="nav-icon">📌</div>
+      <div class="nav-title">Phase 1</div>
+      <div class="nav-subtitle">Foundation & Market Entry</div>
+    </a>
+    
+    <a href="/phase2/" class="nav-card">
+      <div class="nav-icon">🎯</div>
+      <div class="nav-title">Phase 2</div>
+      <div class="nav-subtitle">Interview Intensification</div>
+    </a>
+    
+    <a href="/phase3/" class="nav-card">
+      <div class="nav-icon">📈</div>
+      <div class="nav-title">Phase 3</div>
+      <div class="nav-subtitle">Performance & Advancement</div>
+    </a>
+    
+    <a href="/phase4/" class="nav-card">
+      <div class="nav-icon">🏆</div>
+      <div class="nav-title">Phase 4</div>
+      <div class="nav-subtitle">Mastery & Wealth Building</div>
+    </a>
+    
+    <a href="/calendar/" class="nav-card">
+      <div class="nav-icon">📅</div>
+      <div class="nav-title">Weekly Calendar</div>
+      <div class="nav-subtitle">Color-coded time blocks & schedule</div>
+    </a>
+  </div>
+</div>
+
+<style>
+.hero {
+  padding: 60px 48px;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6 50%, #ec4899);
+  border-radius: 24px;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0 25px 80px rgba(0,0,0,.35);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.hero .tagline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: .95;
+  margin-bottom: 40px;
+}
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.nav-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.nav-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.nav-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 24px;
+    margin: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .nav-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .nav-card {
+    padding: 24px 20px;
+  }
+}
+</style>

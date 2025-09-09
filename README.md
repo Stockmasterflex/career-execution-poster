@@ -1,86 +1,149 @@
-# Career Execution Poster
+# Career OS - Career Execution Platform
 
-A clean, distraction-free career execution poster optimized for **digital PDF export** and mobile viewing.
+A comprehensive career planning and tracking application built with Next.js, TypeScript, Tailwind CSS, and Supabase.
 
-## 🎯 Purpose
+## Features
 
-This poster serves as your daily execution guide, containing:
-- **Phase-based career strategy** (Foundation → Interview → Performance)
-- **Target companies** with priority tiers
-- **Daily & weekly routines** with time blocks
-- **KPI tracking** for progress monitoring
-- **Financial planning** and runway optimization
-- **Victory milestones** for motivation
-- **Handwriting areas** for daily focus and notes
+- **Dashboard**: Today's focus, daily non-negotiables, KPI tracking, and quick navigation
+- **Phase Pages**: Detailed views for each career phase (1-4) with specific goals and metrics
+- **Daily Task Management**: Check off daily routines with streak tracking
+- **KPI Tracking**: Visual progress tracking for career milestones
+- **Company Management**: Track target companies by tier and application status
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## 🚀 Quick Start
+## Quick Start
 
-```bash
-# Install dependencies
-npm install
+### Prerequisites
 
-# Build the poster
-npm run build
+- Node.js 18+ 
+- npm or yarn
+- Supabase account and project
 
-# Export PDF
-npm run export:pdf
+### Installation
 
-# Or build and export in one command
-npm run export:all
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd career-poster
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE=your_supabase_service_role_key
+   ```
+
+4. **Set up the database**
+   Run the SQL schema in your Supabase SQL editor:
+   ```bash
+   # Copy and paste the contents of supabase-schema.sql into Supabase SQL editor
+   ```
+
+5. **Seed the database**
+   ```bash
+   npm run seed
+   ```
+
+6. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+7. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+### Authentication
+
+The application comes with a test user pre-seeded:
+- **Email**: `test@careeros.com`
+- **Password**: `testpassword123`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run seed` - Seed database with test data
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+career-poster/
+├── app/                    # Next.js App Router pages
+│   ├── phase-1/           # Phase 1 page
+│   ├── phase-2/           # Phase 2 page
+│   ├── phase-3/           # Phase 3 page
+│   ├── phase-4/           # Phase 4 page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Dashboard page
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   ├── Auth.tsx          # Authentication component
+│   ├── Dashboard.tsx     # Original dashboard
+│   ├── DashboardNew.tsx  # New dashboard implementation
+│   └── DashboardGate.tsx # Authentication gate
+├── lib/                  # Utility functions
+│   ├── supabase-browser.ts
+│   └── utils.ts
+├── scripts/              # Build and seed scripts
+│   └── seed.js
+└── supabase-schema.sql   # Database schema
 ```
 
-## 📱 Digital Optimized
+## Database Schema
 
-- **Responsive design** - looks great on desktop, tablet, and mobile
-- **Clean PDF export** - high-quality digital PDF for viewing and sharing
-- **No print distractions** - removed all print-specific UI elements
-- **Generous line spacing** - handwriting areas are easy to use
-- **Strong contrast** - optimized for digital viewing
+The application uses the following main tables:
 
-## 📄 Generated Files
+- `daily_nonnegotiables` - Daily routine templates
+- `daily_tasks` - Per-day task completions
+- `kpis` - Key performance indicators by phase
+- `companies` - Target companies with tiers and status
+- `schedule_blocks` - Weekly schedule templates
+- `success_metrics` - Success criteria by phase
+- `milestones` - Career milestone definitions
 
-- `Career-Execution-Poster.pdf` - Main digital PDF export
-- `_site/poster/index.html` - Web version for mobile viewing
-- `_site/index.html` - Project homepage
+## Design System
 
-## 🎨 Features
+The application uses a custom design system with:
 
-- **Phase-based planning** with clear progression
-- **Target company research** with priority tiers
-- **Daily power hours** (morning + evening routines)
-- **Weekly execution blocks** with color-coded time management
-- **KPI tracking** with progress bars
-- **Financial runway** planning and emergency protocols
-- **Victory celebration** milestones
-- **North Star commitment** for motivation
-- **Handwriting areas** for daily focus and runway math
+- **Colors**: Phase-specific gradients and semantic colors
+- **Typography**: Inter font family with proper scaling
+- **Components**: Glass morphism cards, progress bars, and interactive elements
+- **Responsive**: Mobile-first design with desktop enhancements
 
-## 📱 Mobile Viewing
+## Deployment
 
-The poster is fully responsive and optimized for:
-- **Desktop** - Full layout with all details
-- **Tablet** - Adapted grid layouts
-- **Mobile** - Single-column layout for easy scrolling
+### Vercel (Recommended)
 
-## 🔧 Customization
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
 
-Edit `src/_data/plan.json` to customize:
-- Personal information and goals
-- Target companies and priorities
-- Daily/weekly routines
-- KPI targets and metrics
-- Financial planning details
-- Victory milestones
+### Other Platforms
 
-## 📊 PDF Export
+The application can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
 
-The PDF is optimized for:
-- **Digital viewing** on all devices
-- **High contrast** for readability
-- **Clean layout** without print artifacts
-- **Generous spacing** for handwriting areas
-- **Professional appearance** for sharing
+## Contributing
 
----
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-**Ready to execute your career plan!** 🚀
+## License
+
+This project is licensed under the ISC License.

@@ -1,0 +1,16 @@
+{# sections/weekly_timed.njk #}
+<section class="panel" aria-labelledby="weekly-exec-h">
+  <h2 id="weekly-exec-h">Weekly Execution (Timed)</h2>
+  <div class="grid weekly">
+    {% for day, blocks in weeklyTimed %}
+      <div class="day panel">
+        <h4>{{ day }}</h4>
+        {% for b in blocks %}
+          <div class="chip type-{{ b.type | lower | replace(' ','-') }}">
+            <strong>{{ b.time }}</strong> — {{ b.label }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
